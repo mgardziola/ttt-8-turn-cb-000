@@ -11,16 +11,16 @@ def input_to_index(input)
 end
 
 def position_taken?(board, index)
-  if board[index] == "X" || board[index] == "O"
+  if board(index) == "X" || board(index) == "O"
     return true 
   else
-    board[index] == " " || ""
+    board(index) == " " || ""
     return false 
   end
 end
 
 def valid_move?(board, index)
-  if position_taken?[board, index] == false && index <= 8
+  if position_taken?(board, index) == false && index <= 8
     return true
   end
 end
