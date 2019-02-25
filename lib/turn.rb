@@ -10,17 +10,22 @@ def input_to_index(input)
   input.to_i - 1
 end
 
+def valid_move?(board, index)
+  if position_taken?(board, index) == false && index <= 8
+    return true
+  else 
+    return false
+  end
+end
+
+
+
+
 def position_taken?(board, index)
   if board(index) == "X" || board(index) == "O"
     return true 
   else
     board(index) == " " || ""
     return false 
-  end
-end
-
-def valid_move?(board, index)
-  if position_taken?(board, index) == false && index <= 8
-    return true
   end
 end
