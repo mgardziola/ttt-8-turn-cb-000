@@ -21,3 +21,8 @@ end
 def position_taken?(board, index)
   !(board[index] == " " || board[index] == "" || board[index] == nil)
 end
+
+
+def move(board, input_to_index, char = "X")
+  board[input_to_index] = char
+end
